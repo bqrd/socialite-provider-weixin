@@ -11,7 +11,7 @@
 
 namespace Bqrd\Socialite;
 
-use Bqrd\Socialite\Two\WexinProvider;
+use Bqrd\Socialite\Two\WeiXinProvider;
 use Laravel\Socialite\SocialiteManager as Manager;
 
 class SocialiteManager extends Manager
@@ -23,10 +23,11 @@ class SocialiteManager extends Manager
      */
     protected function createWeiXinDriver()
     {
+        $this->app->configure('services');
         $config = $this->app['config']['services.weixin'];
 
         return $this->buildProvider(
-            WexinProvider::class, $config
+            WeiXinProvider::class, $config
         );
     }
 }

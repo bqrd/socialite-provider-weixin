@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Bqrd\Socialite\Weixin;
+namespace Bqrd\Socialite\Two;
 
 use Laravel\Socialite\Two\AbstractProvider;
 use Laravel\Socialite\Two\ProviderInterface;
